@@ -79,13 +79,13 @@ const your_score = document.getElementById("your_score");
 function showResult(UserChoice, ComputerChoice) {
   let score = getResult(UserChoice, ComputerChoice);
   player_score.innerText = Number(player_score.innerText) + score;
-  yourScore.innerText = "score💯 : ";
+  yourScore.innerText = "💯 نقاط ";
   if (score === 1) {
-    result.innerText = "You Win!";
+    result.innerText = "🏆 أنت الفائز";
   } else if (score === -1) {
-    result.innerText = "You Lose!";
+    result.innerText = "💢 خسرت";
   } else if (score === 0) {
-    result.innerText = "It's a Draw!";
+    result.innerText = "🎯 تعادل";
   }
   // Hint: on a score of -1
   // You should do result.innerText = 'You Lose!'
@@ -97,7 +97,7 @@ const hands = document.getElementById("hands");
 function onClickRPS(value) {
   const ComputerChoice = getComputerChoice(Chose);
   const UserChoice = value;
-  hands.innerText = `🧑 ${UserChoice} vs 🤖 ${ComputerChoice} `;
+  hands.innerText = ` ⚔  ${ComputerChoice} ضد 🤖${UserChoice}  🧑`;
   showResult(UserChoice, ComputerChoice);
 }
 
