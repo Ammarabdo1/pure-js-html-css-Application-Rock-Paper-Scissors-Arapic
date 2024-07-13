@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="shortcut icon" href="Images/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+  <div class="buttons">
+    <button class="rpsButton" value="Rock" onclick="onClickRPS('حجر')"  >✊</button>
+    <button class="rpsButton" value="Paper" onclick="onClickRPS('ورقه')">🤚</button>
+    <button class="rpsButton" value="Scissors" onclick="onClickRPS('مقص')">✌</button>
+  </div>
+  <div class="resultContainer">
+    <div>
+      <strong id="score"></strong>
+      <span id="player_score"></sp>
+    </div>
+  <div id="hands"></div>
+  <div id="result"></div>
+  <button id='endGameButton'>🔴</button>
+  </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
