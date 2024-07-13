@@ -10,7 +10,7 @@
     👉 Higher order Function (Math.random())
 */
 
-const score = document.querySelector("#score");
+const yourScore = document.querySelector("#score");
 
 // ** getComputerChoice randomly selects between `rock` `paper` `scissors` and returns that string **
 // getComputerChoice() 👉 'Rock'
@@ -79,7 +79,7 @@ const your_score = document.getElementById("your_score");
 function showResult(UserChoice, ComputerChoice) {
   let score = getResult(UserChoice, ComputerChoice);
   player_score.innerText = Number(player_score.innerText) + score;
-  score.innerText = "score💯 : ";
+  yourScore.innerText = "score💯 : ";
   if (score === 1) {
     result.innerText = "You Win!";
   } else if (score === -1) {
@@ -99,7 +99,6 @@ function onClickRPS(value) {
   const UserChoice = value;
   hands.innerText = `🧑 ${UserChoice} vs 🤖 ${ComputerChoice} `;
   showResult(UserChoice, ComputerChoice);
-  // your_score.innerText = 'score💯 : '
 }
 
 // ** Make the RPS buttons actively listen for a click and do something once a click is detected **
@@ -120,7 +119,7 @@ function endGame() {
     result.innerText = "";
     hands.innerText = "";
     player_score.innerText = "";
-    score.innerText = "";
+    yourScore.innerText = "";
   };
 }
 endGame();
